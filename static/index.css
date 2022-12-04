@@ -12,17 +12,18 @@ img {
 
 h1 {
   margin: 10px;
+  color: white;
 }
 
 textarea {
   width: calc(100% - 65px);
   margin-left: 65px;
-  height: 100vh;
   box-sizing: border-box;
   background-color: #0d1117;
   border: 0px;
   color: white;
   font-size: 20px;
+  height: 467px;
 }
 
 .side-bar {
@@ -43,4 +44,10 @@ textarea {
 
 .top {
   text-align: center;
+}
+
+button{
+  border: 10px;
+  padding: 5px;
+
 }

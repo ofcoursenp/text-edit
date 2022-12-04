@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+  <html lang="en">
   <head>
     {% load static %}
     <link rel="stylesheet" href="{% static 'index.css' %}" />
@@ -8,25 +8,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Text-Editing</title>
   </head>
+
   <body>
     <div class="side-bar">
       <button class="side-icon">
-        <img
-          src="https://i.pinimg.com/736x/ee/c0/71/eec071442e9a1b8e017c5a7c1853b880.jpg"
-          alt=""
-          class='navbar'
-        />
+        <img src="https://i.pinimg.com/736x/ee/c0/71/eec071442e9a1b8e017c5a7c1853b880.jpg" alt="" class='navbar' />
       </button>
     </div>
     <div class="main-page">
       <div class="top">
         <h1>This is the name of the page</h1>
       </div>
-      <div class="content">
-        <textarea name="" id=""></textarea>
-      </div>
+      <form method="post">
+        {% csrf_token %}    
+        <div class="content">
+          <textarea name="text" placeholder="Enter ur text here" id="" rows="3"></textarea>
+        </div>
+        <center>
+          <button type="submit" class="submit">Submit</button>
+        </center>
+      </form>
     </div>
-    {% load static %}
-    <script src={% static 'index.js' %}></script>
   </body>
+  <center>
+    <h3>Result Here : </h3>
+  <h1>{{ textf }}</h1>
+  <h1>NOW DESIGN THIS :)))))))))))))))))</h1>
+  </center>
 </html>
