@@ -21,3 +21,7 @@ def index(req):
         return render(req,'index.html',dfiles)
     print(req.POST.get('text'))
     return render(req,'index.html',)
+
+
+def result(req):
+    return render(req,'result.html')
