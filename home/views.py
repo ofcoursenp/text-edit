@@ -5,21 +5,29 @@ from django.shortcuts import render
 def index(req):
     if req.POST.get('text'):
         text = req.POST.get('text')
-        whattodo = 'r p'
-        newtext = ""
-        if whattodo[0] == "r":
-            if whattodo[2] == 'p':
-                splittext = [*text]
-                for i in splittext:
-                    if i == "!" or i == ":":
-                        continue
-                    else:
-                        newtext = newtext + i
+        punc = req.POST.get('r p','off')
+        space = req.POST.get('r s','off')
+        newtext = text
+        if punc == "on":
+            splittext = [*newtext]
+            newtext = ''
+            for i in splittext:
+                if i == "!" or i == ":":
+                    continue
+                else:
+                    newtext = newtext + i
+        if space == "on":
+            splittext = [*newtext]
+            newtext = '' 
+            for i in splittext:
+                if i == " " or i == "  ":
+                    continue
+                else:
+                    newtext = newtext + i    
         dfiles = {'textf':newtext,}
         print(req.POST.get('text'))
         print(newtext)
-        return render(req,'index.html',dfiles)
-    print(req.POST.get('text'))
+        return render(req,'result.html',dfiles)
     return render(req,'index.html',)
 
 

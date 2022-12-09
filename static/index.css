@@ -15,8 +15,18 @@ h1 {
   color: white;
 }
 
-textarea {
+/* textarea {
   width: calc(100% - 65px);
+  margin-left: 65px;
+  box-sizing: border-box;
+  background-color: #0d1117;
+  border: 0px;
+  color: white;
+  font-size: 20px;
+  height: 467px;
+} */
+textarea {
+  /* width: calc(100% - 65px); */
   margin-left: 65px;
   box-sizing: border-box;
   background-color: #0d1117;
