@@ -15,8 +15,9 @@ def index(req):
                         continue
                     else:
                         newtext = newtext + i
-        dfiles = {'text':newtext,}
+        dfiles = {'textf':newtext,}
         print(req.POST.get('text'))
         print(newtext)
         return render(req,'index.html',dfiles)
+    print(req.POST.get('text'))
     return render(req,'index.html',)
