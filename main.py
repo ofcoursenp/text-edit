@@ -21,10 +21,14 @@
  
 # print(newtext)
 
+import string
+thelist = list(string.ascii_uppercase)
+print(thelist)
 
-text = "abc! acde"
+text = input()
 punc = "off"
 space = "off"
+capital = "on"
 newtext = text
 if punc == "on":
     splittext = [*newtext]
@@ -41,8 +45,16 @@ if space == "on":
         if i == " " or i == "  ":
             continue
         else:
-            newtext = newtext + i      
-
+            newtext = newtext + i     
+ 
+if capital == "on":
+    splittext = [*newtext]
+    newtext = '' 
+    for i in splittext:
+        if i in thelist:
+            continue     
+        else:
+            newtext = newtext + i     
 print(newtext)
 
 
