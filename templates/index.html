@@ -110,6 +110,7 @@
   <main class="main-page">
     <h1 class="heading">FILTER TEXT</h1>
       <form method="post">
+        {% csrf_token %}
           <textarea name="text" placeholder="Enter ur text here" id=""></textarea>
             <div class="options">
               <div class="form-check form-switch">
