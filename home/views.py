@@ -1,3 +1,4 @@
+import string
 from django.shortcuts import render
 import string
 
@@ -11,14 +12,11 @@ def index(req):
         capital = req.POST.get('r c','off')
         thelist = list(string.ascii_uppercase)
         newtext = text
+
         if punc == "on":
-            splittext = [*newtext]
-            newtext = ''
-            for i in splittext:
-                if i == "!" or i == ":":
-                    continue
-                else:
-                    newtext = newtext + i
+            newtext = text.translate(str.maketrans('', '', string.punctuation))
+            print(newtext)
+
         if space == "on":
             splittext = [*newtext]
             newtext = '' 
@@ -45,3 +43,7 @@ def index(req):
 
 def result(req):
     return render(req,'result.html')
+
+def help(req):
+    return render(req,'help-me.html')
+
