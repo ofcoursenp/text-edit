@@ -1,10 +1,12 @@
 import string
 from django.shortcuts import render
 import string
+from home.models import Text
 
 # Create your views here.
 
 def index(req):
+    databasetexts = Text.objects.all()
     if req.POST.get('text'):
         text = req.POST.get('text')
         punc = req.POST.get('r p','off')
@@ -12,6 +14,9 @@ def index(req):
         capital = req.POST.get('r c','off')
         thelist = list(string.ascii_uppercase)
         newtext = text
+        for i in databasetexts:
+            print(i)
+            print(i)
 
         if punc == "on":
             newtext = text.translate(str.maketrans('', '', string.punctuation))
@@ -36,7 +41,10 @@ def index(req):
                     newtext = newtext + i     
         print(req.POST.get('text'))
         print(newtext)
-        dfiles = {'textf':newtext,}
+        dfiles = {'textf':newtext,
+                    'database':databasetexts}
+        ins = Text(text=text,newtext=newtext)
+        ins.save()
         return render(req,'result.html',dfiles)
     return render(req,'index.html',)
 
