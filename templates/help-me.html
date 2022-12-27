@@ -1,19 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../static/index.css" />
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap"
-    rel="stylesheet"
-  />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/index.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Help Me</title>
 </head>
-
 <body>
   <nav class="navbar">
     <ul class="navbar-nav">
       <li class="logo">
-        <a href="" class="nav-link">
+        <a href="index.html" class="nav-link">
           <span class="link-text logo-text">HOME</span>
           <svg
             aria-hidden="true"
@@ -42,7 +44,7 @@
       </li>
 
       <li class="nav-item">
-        <a href="result" class="nav-link">
+        <a href="result.html" class="nav-link">
           <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 96.17 122.88" style="enable-background:new 0 0 96.17 122.88" xml:space="preserve">
             <g class="fa-group">
             <path
@@ -56,7 +58,7 @@
       </li>
 
       <li class="nav-item">
-        <a href="help" class="nav-link">
+        <a href="help-me.html" class="nav-link">
           <svg
           xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
           xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -107,28 +109,5 @@
     </ul>
   </nav>
 
-<main class="main-page">
-    <h1 class="heading">FILTER TEXT</h1>
-      <form method="post">
-        {% csrf_token %}   
-        <textarea name="text" placeholder="Enter ur text here" id="" rows="3" style="width: 1262px; height: 470px;"></textarea>
-        <center>
-        <div class="form-check form-switch">
-          <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="r p">
-          <label class="form-check-label" for="flexSwitchCheckDefault">Remove Punchuation</label>
-        </div>
-        <div class="form-check form-switch">
-          <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="r s">
-          <label class="form-check-label" for="flexSwitchCheckChecked">Remove Space</label>
-        </div>
-        <div class="form-check form-switch">
-          <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="r c">
-          <label class="form-check-label" for="flexSwitchCheckChecked">Remove Capital</label>
-        </div>
-          </div>
-          <button type="submit" class="submit">Submit</button>
-      </form>
-    </main>
-    <script src="../static/index.js"></script>
-  </body>
+</body>
 </html>
