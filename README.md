@@ -1,3 +1,7 @@
+# Created by ofcoursenp (__init__) and CalfMoon
+# FrontEnd by CalfMoon
+# BackEnd by ofcoursenp (__init__)
+
 # text-edit
 
 Go to Terminal and install django
