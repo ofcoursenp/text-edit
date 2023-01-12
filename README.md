@@ -1,6 +1,7 @@
-# Created by ofcoursenp (__init__) and CalfMoon
-# FrontEnd by CalfMoon
-# BackEnd by ofcoursenp (__init__)
+# Created by <a href="https://github.com/ofcoursenp">ofcoursenp (__init__)</a> and <a href="https://github.com/calfmoon">CalfMoon</a>
+
+# FrontEnd by <a href="https://github.com/calfmoon">CalfMoon</a>
+# BackEnd by <a href="https://github.com/ofcoursenp">ofcoursenp (__init__)</a>
 
 # text-edit
 
