@@ -4,6 +4,8 @@
 # BackEnd by <a href="https://github.com/ofcoursenp">ofcoursenp (__init__)</a>
 
 # text-edit
+This is a simple website that edits the text the way you want it to 
+
 
 Go to Terminal and install django
 
