@@ -14,9 +14,9 @@ def index(req):
         capital = req.POST.get('r c','off')
         thelist = list(string.ascii_uppercase)
         newtext = text
+        data = []
         for i in databasetexts:
-            print(i)
-            print(i)
+            data.append(i)
 
         if punc == "on":
             newtext = text.translate(str.maketrans('', '', string.punctuation))
@@ -42,7 +42,7 @@ def index(req):
         print(req.POST.get('text'))
         print(newtext)
         dfiles = {'textf':newtext,
-                    'database':databasetexts}
+                    'database':data}
         ins = Text(text=text,newtext=newtext)
         ins.save()
         return render(req,'result.html',dfiles)

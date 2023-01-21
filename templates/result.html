@@ -112,14 +112,13 @@
       <h1 class="heading">RESULT PAGE</h1>
       <div class="result-area">
           <h2>{{ textf }}</h2>
+          {% for event in database %}
+            {{ event }} <br>
+          {% endfor %}
       </div>
         <a href="">
             <button>Return to Home</button>
         </a>
-        {% comment %} {% for event in database %}
-          {{ event.Newtext }} <br>
-          {{ event.Text }} <br>
-        {% endfor %} {% endcomment %}
   </main>
   <script src="../static/index.js"></script>
 </body>
